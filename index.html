@@ -7,11 +7,38 @@
                 width: 600px;
                 height: auto;
             }
+            h1{
+                color: plum;
+            }
         </style>
     </head>
     <body>
-        <h1>Website for the YNs</h1>
-        <p>All the RNs use this website</p>
-        <img src="", alt="error">
+        <h1>dope header</h1>
+        <p>dope paragraph</p>
+        <img src="https://t4.ftcdn.net/jpg/05/72/82/85/360_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg", alt="error">
+        <blockquote>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
+            ― Albert Einstein</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+        <script>
+            var index = 0
+            
+            function changeQuote() {
+                var quotes = [
+                `“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”
+            ― Albert Einstein`,
+            `"I like boba"-me`,
+            `"Im a sigma"-Jack Huang`,
+            `"Im just a chill guy"-Dawson Katerberg`
+        
+                ]
+                var blockquote = document.querySelector("blockquote")
+                blockquote.innerHTML = quotes[index];
+                index++;
+                if (index>=4) {
+                    index = 0;
+                }
+            }
+            changeQuote()
+        </script>
     </body>
 </html>
